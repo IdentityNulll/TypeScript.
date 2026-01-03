@@ -36,3 +36,22 @@ type Status = "loading" | "success" | "error"
 // like this:
 let s : Status = "loading"
 console.log(s)
+
+// Array type
+// let numbers : number[]= [1,2,3,"3"] // here  we can not make the array of any other type other than number
+// and also if we forEach it or something like that and try to use any method it is gonna give us the exact method that we can use instead of all of them
+
+// and also we can do this:
+let numbers : [number, boolean] = [1, true] // so right now we can only get this and nothing else 
+// console.log(numbers[0])
+numbers.unshift()
+// one thing to know is that push, unshift methods do not complain in ts even when things like above happen even tho there should be only 2 indexes
+// but other than thos types pushed, other types will get error
+
+// enum :
+enum Sizes  {Small, Medium , Large = 1}
+let mySize : Sizes = Sizes.Large
+console.log(mySize)
+// enums are like groups and we can call any of those and just use them anywhere 
+// so in enums if we declare one of them as 1 the rest is gonna count upwards and be decalred by compiler itself 
+enum whatever {Small = "Hll", Medium = "hsda"} // but if we put string to it we have to do the same for every single one
