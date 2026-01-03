@@ -29,3 +29,28 @@ console.log(formatValue("Hello there"));
 // like this:
 var s = "loading";
 console.log(s);
+// Array type
+// let numbers : number[]= [1,2,3,"3"] // here  we can not make the array of any other type other than number
+// and also if we forEach it or something like that and try to use any method it is gonna give us the exact method that we can use instead of all of them
+// and also we can do this:
+var numbers = [1, true]; // so right now we can only get this and nothing else 
+// console.log(numbers[0])
+numbers.unshift();
+// one thing to know is that push, unshift methods do not complain in ts even when things like above happen even tho there should be only 2 indexes
+// but other than thos types pushed, other types will get error
+// enum :
+var Sizes;
+(function (Sizes) {
+    Sizes[Sizes["Small"] = 0] = "Small";
+    Sizes[Sizes["Medium"] = 1] = "Medium";
+    Sizes[Sizes["Large"] = 1] = "Large";
+})(Sizes || (Sizes = {}));
+var mySize = Sizes.Large;
+console.log(mySize);
+// enums are like groups and we can call any of those and just use them anywhere 
+// so in enums if we declare one of them as 1 the rest is gonna count upwards and be decalred by compiler itself 
+var whatever;
+(function (whatever) {
+    whatever["Small"] = "Hll";
+    whatever["Medium"] = "hsda";
+})(whatever || (whatever = {})); // but if we put string to it we have to do the same for every single one
