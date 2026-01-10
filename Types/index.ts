@@ -92,3 +92,19 @@ let log : any = null
 log?.("a") // only works if the log has a function value otherwise return undefined
 
 
+
+
+// interfaces in typeScript -> are like a blueprint for objects
+interface Player {
+  name : string,
+  level : number,
+  username : string,
+}
+
+let player : Player = {
+  name: "Someone",
+  level : 12,
+  username : "Identitynull"
+}
+
+// that is how interfaces are created and used
